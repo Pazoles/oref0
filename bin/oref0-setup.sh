@@ -267,8 +267,8 @@ else
     (cd ~/src && git clone git://github.com/openaps/oref0.git) || die "Couldn't clone oref0"
 fi
 echo Checking oref0 installation
-npm list -g oref0 | egrep oref0@0.3.[6-9] || (echo Installing latest oref0 && sudo npm install -g oref0)
-#(echo Installing latest oref0 dev && cd $HOME/src/oref0/ && npm run global-install)
+npm list -g oref0 | egrep oref0@0.3.[6-9] || (echo Installing latest oref0 dev && cd $HOME/src/oref0/ && npm run global-install) #(echo Installing latest oref0 && sudo npm install -g oref0)
+
 
 echo Checking mmeowlink installation
 if openaps vendor add --path . mmeowlink.vendors.mmeowlink 2>&1 | grep "No module"; then
